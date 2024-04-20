@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    int a[] = {100, 54, -89, -2, 54, -89};
+    int counter = 0; 
+    for (int i = 1; i < 6; i++) {
+        if ((a[i-1] > 0 && a[i] < 0) || (a[i-1] < 0 && a[i] > 0)) {
+            counter++;
+        }
+    }
+    printf("Количество смены знаков %d\n", counter); 
+    return 0;
+}
